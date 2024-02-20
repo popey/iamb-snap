@@ -1,0 +1,25 @@
+name: iamb
+base: core22
+adopt-info: iamb
+summary: A Matrix client for Vim addicts
+description: |
+  This project is a work-in-progress, and there's still a lot to be implemented,
+  but much of the basic client functionality is already present.
+
+grade: stable
+confinement: strict
+
+parts:
+  iamb:
+    plugin: rust
+    source: https://github.com/ulyssa/iamb.git
+    source-tag: "v0.0.8"
+    override-pull: |
+      craftctl default
+      craftctl set version="$(git rev-parse --short HEAD)"
+
+apps:
+  iamb:
+    command: bin/iamb
+    plugs:
+      - network
