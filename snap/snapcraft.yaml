@@ -1,6 +1,6 @@
 name: iamb
 base: core22
-adopt-info: iamb
+version: 0.0.9
 summary: A Matrix client for Vim addicts
 description: |
   This project is a work-in-progress, and there's still a lot to be implemented,
@@ -17,23 +17,8 @@ architectures:
 parts:
   iamb:
     plugin: rust
-    source: https://github.com/ulyssa/iamb.git
-    override-pull: |
-      craftctl default
-      git fetch --tags
-      last_committed_tag="$(git for-each-ref --sort=-creatordate --format '%(refname:short)' refs/tags | grep -E '^v[0-9]+\.[0-9]+\.[0-9]+(-[0-9]+)?$' | head -n 1)"
-      last_released_tag="$(snap info iamb | awk '$1 == "latest/beta:" { print $2 }')"
-      # If the latest tag from the upstream project has not been released to
-      # stable, build that tag instead of master.
-      if [ "${last_committed_tag}" != "${last_released_tag}" ]; then
-       git fetch
-       git checkout "${last_committed_tag}"
-      fi
-
-      version="$(git describe --tags)"
-      craftctl set version="$version"      
-
-
+    source: https://github.com/ulyssa/iamb/archive/refs/tags/v$SNAPCRAFT_PROJECT_VERSION.tar.gz
+    
 apps:
   iamb:
     command: bin/iamb
