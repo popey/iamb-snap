@@ -17,7 +17,7 @@ architectures:
 parts:
   iamb:
     plugin: rust
-    source: https://github.com/ulyssa/iamb/archive/refs/tags/v$SNAPCRAFT_PROJECT_VERSION.tar.gz
+    source: https://github.com/ulyssa/iamb/archive/refs/tags/$SNAPCRAFT_PROJECT_VERSION.tar.gz
     
 apps:
   iamb:
