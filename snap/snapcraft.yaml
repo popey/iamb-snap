@@ -1,5 +1,5 @@
 name: iamb
-base: core22
+base: core24
 version: "v0.0.10"
 summary: A Matrix client for Vim addicts
 description: |
@@ -9,11 +9,11 @@ description: |
 grade: stable
 confinement: strict
 
-architectures:
-  - build-on: arm64
-  - build-on: amd64
-  - build-on: armhf
-  
+platforms:
+  amd64:
+  arm64:
+  armhf:
+
 parts:
   iamb:
     plugin: rust
