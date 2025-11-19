@@ -28,3 +28,4 @@ apps:
     command: bin/iamb
     plugs:
       - network
+      - network-bind
