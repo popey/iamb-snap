@@ -3,6 +3,7 @@
 [![iamb](https://github.com/popey/iamb-snap/actions/workflows/test-snap-can-build.yml/badge.svg)](https://github.com/popey/iamb-snap/actions)
 [![iamb](https://snapcraft.io/iamb/badge.svg)](https://snapcraft.io/iamb)
 [![iamb](https://snapcraft.io/iamb/trending.svg?name=0)](https://snapcraft.io/iamb)
+
 ## iamb
 
 iamb is a Matrix client for Vim addicts
