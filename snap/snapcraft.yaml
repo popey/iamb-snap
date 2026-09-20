@@ -1,6 +1,6 @@
 name: iamb
 base: core24
-version: 'v0.0.11'
+version: 'v0.0.12'
 summary: A Matrix client for Vim addicts
 description: |
   This project is a work-in-progress, and there's still a lot to be implemented,
